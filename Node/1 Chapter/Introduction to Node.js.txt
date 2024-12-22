@@ -1,0 +1,46 @@
+The Backend
+************
+
+Servers, Application and Database...
+
+Server just like a computer run 24/7
+
+Application Logic of response from request
+
+Database is store data just store user information
+
+Backend Tools and technologies
+------------------------------
+
+language(javascript-node.js, java-spring boot, ruby-Rails, php-, c#-asp.net, python-Dj)
+
+frameworks ->commonly using functionality in web application.
+            (Reading file, writing file, Data streams, URL String, Error Codes, Debugger)
+
+
+node.js
+********
+free, open-source JavaScript runtime environment 
+that allows developers to create web applications, 
+servers, command line tools, and scripts.
+
+Cross-platform: Node.js can run on Windows, Linux, Unix, macOS, and more. 
+Event-driven architecture: Node.js is built on an event-driven architecture with asynchronous I/O, 
+                           which helps optimize scalability and throughput.
+
+Lightweight: Node.js is lightweight and efficient.
+No locks: Users don't have to worry about dead-locking the process.
+HTTP: Node.js is designed with streaming and low latency in mind.
+
+using Node
+***********
+
+
+REPL(Read Eval Print Loop)
+
+A computer environment where user input are read and evaluated,
+and then the result are returned to the user.
+
+
+
+
