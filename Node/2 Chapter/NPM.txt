@@ -1,0 +1,9 @@
+Node package manager
+**********************
+This include a group of modules or packages developed by other developer 
+which can be used in your application by installing them..
+
+
+
+
+
