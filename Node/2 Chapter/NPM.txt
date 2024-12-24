@@ -1,9 +1,17 @@
-Node package manager
+Node package manager -Created by github organization  
 **********************
+open-source, other developer can develop some tools and library we can reuse it our code.
 This include a group of modules or packages developed by other developer 
 which can be used in your application by installing them..
 
+we want to create package.json for define all the dependency file here 
+so give init commend to initiate
 
+npm init
+
+then we can use npm install package name1 package name2 package name3
+
+npm install 
 
 
 

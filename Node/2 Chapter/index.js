@@ -11,3 +11,4 @@ fs.writeFile("read and write/message1.txt","finaly i understand",(err) => {
     if (err) throw err;
     console.log(data);
   }); 
+
