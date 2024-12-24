@@ -5,4 +5,4 @@ var sillyName = generateName();
 
 console.log(`My name is ${sillyName}`);
 
-console.log(`My Superhero name is ${sillyName}`);
+// console.log(`My Superhero name is ${sillyName}`);
