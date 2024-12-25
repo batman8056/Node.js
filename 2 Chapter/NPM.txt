@@ -13,5 +13,6 @@ then we can use npm install package name1 package name2 package name3
 
 npm install 
 
-
+ECMScript modules
+we can use import statement here it make common.js in all the file 
 
