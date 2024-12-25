@@ -14,7 +14,7 @@ inquirer
     // Use user feedback for... whatever!!
     const url = answers.URL;
     var qr_png = qr.image(url);
-    qr_png.pipe(fs.createWriteStream('qr_img.png'));
+    qr_png.pipe(fs.createWriteStream('image/qr_img.png'));
  
   })
   .catch((error) => {
