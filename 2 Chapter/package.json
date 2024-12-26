@@ -1,0 +1,15 @@
+{
+  "name": "2-chapter",
+  "version": "1.0.0",
+  "main": "arg.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Manikandan",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "yargs": "^17.7.2"
+  }
+}
