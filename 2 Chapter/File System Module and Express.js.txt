@@ -21,6 +21,9 @@ delete.js
 JSON (javascript object notation)
 ***********************************
 
-storing a data key and value
+->storing a data key and value
 
+jsondata.js
+json1.json
+modjson.js
 
