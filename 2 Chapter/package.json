@@ -10,6 +10,11 @@
   "license": "ISC",
   "description": "",
   "dependencies": {
+    "expres": "^0.0.5",
+    "express": "^4.21.2",
     "yargs": "^17.7.2"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.0"
   }
 }

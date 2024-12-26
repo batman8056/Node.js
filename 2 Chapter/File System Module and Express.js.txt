@@ -27,3 +27,23 @@ jsondata.js
 json1.json
 modjson.js
 
+Express In Node.js:-
+******************
+Express.js is a minimal and flexible Node.js web application framework 
+that provides a list of features for building web and mobile applications easily. 
+It simplifies the development of server-side applications by offering 
+an easy-to-use API for routing, middleware, and HTTP utilities.
+
+->expres is javascript frame work which allowed to back end server
+
+1.better readbility
+2.less code
+3.Ability to add middleware
+
+An Express server
+
+index.js
+
+HTTP Request:-
+***************
+
