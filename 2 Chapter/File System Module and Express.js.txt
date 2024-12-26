@@ -1,7 +1,26 @@
 Commend line Arguments:-
 **************************
--you can recive input from a user via commend line argumnt in Node.js application
+->you can recive input from a user via commend line argumnt in Node.js application
+
+arg.js
+calc.js
+calcyargs.js
 
 File system:-
 ************
+->it is a method of organizing and retriving files from a storage medium, such as a hard drive
+
+open.js
+get.js
+write.js
+read.js
+rename.js
+append.js
+delete.js
+
+JSON (javascript object notation)
+***********************************
+
+storing a data key and value
+
 
