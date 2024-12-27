@@ -55,3 +55,17 @@ DELETE - delete resource from server
 
 /Endpoints
 
+HTTP Response status code
+
+1. Information response (100 - 199)
+2. Successful resonse (200 - 299)
+3. Redirection messages (300 - 399)
+4. Client error response (400 - 499)
+5. Server error resonses (500 - 599)
+
+chapter 2.1 
+************
+here you should understand on req and res of the server 
+with out using front end alternative solution postman
+
+
