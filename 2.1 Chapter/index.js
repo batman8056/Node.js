@@ -15,10 +15,11 @@ app.post("/register",(req, res)=>{
 app.put("/user/manikandan",(req, res)=>{
     res.sendStatus(200);
 });
-
+//patch the information of the user manikandan details
 app.patch("/user/manikandan",(req, res)=>{
     res.sendStatus(200);
 });
+//delete the user manikandan
 app.delete("/user/manikandan",(req, res)=>{
     res.sendStatus(200);
 });

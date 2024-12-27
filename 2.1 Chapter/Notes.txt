@@ -1,0 +1,9 @@
+
+chapter 2.1 
+************
+here you should understand on req and res of the server 
+with out using front end alternative solution postman
+
+Express middleware:-
+*******************
+
