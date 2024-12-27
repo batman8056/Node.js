@@ -47,3 +47,11 @@ index.js
 HTTP Request:-
 ***************
 
+GET - request resource from server
+POST - sending resource from server
+PUT - replace resource from server
+PATCH - patchup resource from server
+DELETE - delete resource from server
+
+/Endpoints
+
