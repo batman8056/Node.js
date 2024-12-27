@@ -2,8 +2,31 @@
 chapter 2.1 
 ************
 here you should understand on req and res of the server 
-with out using front end alternative solution postman
+without using front end alternative solution postman
 
+index.js
+initial test (postman collection)
 Express middleware:-
 *******************
+
+1.What type of req
+2.Authorization
+3.Error handler
+
+Node.js body parsing middleware.
+
+parse incoming req bodies in a middleware before your handlers, 
+available under the req.body property.
+
+example :-
+
+we have login form in that time we need to parse the req form username and password property
+
+<form action="/login" method="post">
+    <lable for ="email">Email</lable>
+    <input type="text" name="email" required>
+    <lable for ="password">Password</lable>
+    <input type="text" name="password" required>
+    <input type="submit" value="Submit">
+</form>
 
