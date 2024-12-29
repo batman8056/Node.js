@@ -1,0 +1,58 @@
+SYNCHRONOUS:-
+**************
+->Means not happening at the same time.
+
+Synchronous programming is a blocking architecture where each operation depends on the one before it
+
+ASYNCHRONOUS:-
+***************
+->Means happening at the same time.
+
+Asynchronous programming is a non-blocking architecture where tasks can run simultaneously
+
+What is A CAllback function?
+****************************
+->Any function that is passed as an argument to another function 
+so that it can be executed in that other function is called as a callback.
+
+
+What is A CAll Stack?
+---------------------
+Call Stack is a data structure that uses the Last In, First Out (LIFO) principle to temporarily store 
+and manage function invocation call at run-time.
+
+
+callStack.js
+
+       |   CallStack        |
+       |   ----------       |
+       |console.log('john') |
+       |Anonymous ('john')  |
+       |console.log('mani') |
+       |Anonymous ('mani')  |
+       |forEach()           |
+       |listeUsers()        |
+       |Main()              |
+       ----------------------
+
+Node.js has only one stack but with the help of call back Queue 
+and Event loops they execute codes asynchronously.
+
+What is A Callback Queue:-
+*****************
+
+->maintains a list of callback function that are ready to get executed
+
+index.js
+
+What is A Event loops:
+*************
+
+->ensures the execution of the callback after the call stack get empty
+
+What is A Promise
+******************
+
+PENDING : FULFILLED : REJECT
+
+promise.js
