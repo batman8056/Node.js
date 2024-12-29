@@ -1,7 +1,7 @@
 
 const myPromise = new Promise((resolve,
     reject) => {
-    const error =true;
+    const error =false;
     if(!error){
         resolve('Yes resolve the promise')
     }else{
@@ -9,13 +9,18 @@ const myPromise = new Promise((resolve,
     }
 })
 
-console.log(myPromise);
+// console.log(myPromise);
 
 const myNexPromise1 = new Promise((resolve,
     reject) => {
     setTimeout(function(){
         resolve('myNexPromise resolve')
     },3000)
+})
+
+myNexPromise1
+.then(value =>{
+    console.log(value)
 })
 
 //use then to get the value from promise
@@ -27,12 +32,10 @@ myPromise
 .then(newvalue => {
     console.log(newvalue)
 })
-//if error coming from promise catch the error
+//if reject coming from promise catch the error
 .catch(err=>{
     console.log(err);
 })
 
-myNexPromise1
-.then(value =>{
-    console.log(value)
-})
+
+

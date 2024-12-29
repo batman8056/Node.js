@@ -52,7 +52,22 @@ What is A Event loops:
 
 What is A Promise
 ******************
+->A Promise contains both the producing code and calls to the consuming code
 
 PENDING : FULFILLED : REJECT
 
+then method, which conforms to the Promise-like interface. 
+A thenable can be used in place of a Promise in many contexts
+
 promise.js
+
+Async /Await:-
+*************
+->Async/Await is a feature in JavaScript that simplifies writing and managing asynchronous code. 
+It allows you to work with asynchronous operations in a more synchronous and readable way.
+
+->Declared using the async keyword.
+
+->Improved Readability: Replaces .then and .catch chains, making the code cleaner and easier to follow.
+->Error Handling: Use try...catch for error handling, which is more intuitive compared to .catch in Promises.
+
