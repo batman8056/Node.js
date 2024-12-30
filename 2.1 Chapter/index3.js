@@ -9,6 +9,7 @@ const app = express();
 const port = 3000;
 var bandName = "";
 
+//aldratative we use bodyParser to express it will work
 app.use(bodyParser.urlencoded({ extended: true }));
 
 function bandNameGenerator(req, res, next) {

@@ -1,0 +1,6 @@
+Embedded JavaScript Templates
+*****************************
+
+->It's a popular templating language that allows developers to generate HTML markup using JavaScript.
+
+
