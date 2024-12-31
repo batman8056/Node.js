@@ -3,4 +3,26 @@ Embedded JavaScript Templates
 
 ->It's a popular templating language that allows developers to generate HTML markup using JavaScript.
 
+Separation of Concerns:-
+************************
+Frontend         |  backend
+---------------- | --------------
+Structure, Style |  Functionality
+                 |
 
+Templating language:-
+1. handlebars
+2. pug
+3. Twing-php
+4. Jinja-python
+5. EJS (Embedded JavaScript)
+
+<body>
+    <ul>
+        <% for(let i=0; i<items.length; i++) { %>
+            <li>
+            <%= items [i] %>
+            </li>
+        <% } %>
+    </ul>
+</body>
