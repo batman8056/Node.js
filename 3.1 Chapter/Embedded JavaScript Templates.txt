@@ -26,3 +26,30 @@ Templating language:-
         <% } %>
     </ul>
 </body>
+
+
+ex:-
+index.js
+
+Diffrent type of EJS Tags:-
+----------------------------
+
+//EJS tag output value
+<%= variable %>
+
+//print statement
+<% console.log("hello") %>
+
+//Render HTML(passing html tag here)
+<%- <h1>hello world</h1> %>
+
+// not show output value <% or %>
+<%%  %%>
+
+//comment line
+<%# this is comment %>
+
+//indert another EJS file
+<%- include("header.ejs")%>
+
+
