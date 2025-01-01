@@ -63,3 +63,21 @@ index.ejs
     </ul>
 </body>
 
+example:-
+EJS Tags
+index.js
+
+EJS and Passing Data:-
+--------------------
+
+->passing data from server to client and client to server.
+
+Ex:-
+EJS & Passing Data
+index.js
+
+Partials and Layouts:-
+------------------------
+
+->Reusing EJS code
+
