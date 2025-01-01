@@ -17,17 +17,6 @@ Templating language:-
 4. Jinja-python
 5. EJS (Embedded JavaScript)
 
-<body>
-    <ul>
-        <% for(let i=0; i<items.length; i++) { %>
-            <li>
-            <%= items [i] %>
-            </li>
-        <% } %>
-    </ul>
-</body>
-
-
 ex:-
 index.js
 
@@ -52,4 +41,25 @@ Diffrent type of EJS Tags:-
 //indert another EJS file
 <%- include("header.ejs")%>
 
+Running JS in HTML:-
+
+index.js
+-------
+let bowl = ['Apple', 'Orange', 'Pears'];
+
+app.get('/', (req, res)=>{
+    res.render("index.ejs", {fruits: bowl});
+})
+
+index.ejs
+----------
+<body>
+    <ul>
+        <% for(let i=0; i<fruits.length; i++) { %>
+            <li>
+            <%= fruits [i] %>
+            </li>
+        <% } %>
+    </ul>
+</body>
 
