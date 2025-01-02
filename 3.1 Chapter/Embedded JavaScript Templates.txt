@@ -87,4 +87,6 @@ index.js
 app.use(express.Static("src/public"));
 
 
+example:-
+Band Name generater
 
