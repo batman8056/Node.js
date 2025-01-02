@@ -1,0 +1,21 @@
+What is API?
+
+Application programming interface (API)
+
+interface between two diffrent softwar
+
+Diffrent type of API diffrent type of architecture rule
+1.GrapQL
+2.{SOAP}
+3.{REST:API}
+4.gRPC
+
+What is REST API?
+------------------
+->it is a set of rules
+
+->important rule is HTTP protocal like get,post,put,patch,delete
+
+Formatting API Request?
+-----------------------
+Endpoints, Path Parameters and Query Parameters
