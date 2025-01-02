@@ -21,14 +21,11 @@ app.use(express.static("public"));
 
 //Step 4 - Add a dynamic year to the footer.
 //Hint: Google to find out how to get the current year using JS.
-const currentYear = new Date().getFullYear();
-console.log(currentYear)
+
 
 //Step 1 - Make the get route work and render the index.ejs file.
 app.get("/", (req, res) => {
-  res.render("index",{
-    Year:currentYear
-  });
+  res.render("index");
 });
 
 app.post("/submit", (req, res) => {
