@@ -81,3 +81,10 @@ Partials and Layouts:-
 
 ->Reusing EJS code
 
+Static file:-
+
+index.js
+app.use(express.Static("src/public"));
+
+
+
