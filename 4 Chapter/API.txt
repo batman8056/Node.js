@@ -1,9 +1,9 @@
 
 What is API?
+***********
+->Application programming interface (API)
 
-Application programming interface (API)
-
-interface between two diffrent softwar
+->interface between two diffrent softwar
 
 Diffrent type of API diffrent type of architecture rule
 1.GrapQL
@@ -19,10 +19,93 @@ What is REST API?
 
 Formatting API Request?
 -----------------------
-Endpoints-
 
+client request |  your server | Someone else's server
+-----------------------------------------------------
+       req/res       req/res         req/res
+----<------------>private API<----->Public API<------->
+
+
+
+BaseURL/Endpoints-
+------------------
+https://google.com/entertainment
+
+example:-
+GET https://bored-api.appbrewery.com/random
+
+{
+    "activity": "Volunteer at your local food pantry",
+    "availability": 0.1,
+    "type": "charity",
+    "participants": 1,
+    "price": 0,
+    "accessibility": "Few to no challenges",
+    "duration": "hours",
+    "kidFriendly": true,
+    "link": "",
+    "key": "1878070"
+}
 
 Path Parameter-
+--------------
+
+->we pass path param is unique identification perticular data only we will get.
+
+GET https://bored-api.appbrewery.com/random/{path-parameter}
+https://bored-api.appbrewery.com/activity/3943506
 
 
 Query Parameters-
+---------------
+->we are passing Query param for filter the type=education then it will be showed type=education 
+presented data only or multiple query we passed based on that it will geting the details.
+
+GET https://bored-api.appbrewery.com/random? query1=value&query2=value
+https://bored-api.appbrewery.com/filter?type=charity&participants= 1
+
+
+Introduction to JSON:-
+*********************
+
+what is json?
+------------
+->JavaScript Object Notation, is a lightweight, text-based format for storing and exchanging data.
+->JSON is based on a subset of the JavaScript Programming Language.
+
+Human-readable: JSON is easy for humans to read and understand. 
+Machine-parsable: JSON is easy for computers to understand. 
+Language-independent: JSON is independent of any programming language.
+
+->Objects collection of name-value pairs, defined within left ({) and right (}) braces.
+->Arrays ordered collection of values, defined within left ([) and right (]) brackets.
+
+JS Object:
+const data = {
+    "activity": "Volunteer at your local food pantry",
+    "availability": 0.1,
+    "type": "charity",
+    "spend time": [
+        {
+            "duration": "hours",
+            "duration": "minutes"
+        }
+    ]
+    "key": "1878071"
+}
+
+JSON:
+{
+    "activity": "Volunteer at your local food pantry",
+    "availability": 0.1,
+    "type": "charity",
+    "spend time": [
+        {
+            "duration": "hours",
+            "duration": "minutes"
+        }
+    ]
+    "key": "1878072"
+}
+
+
