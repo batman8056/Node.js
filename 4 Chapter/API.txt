@@ -121,4 +121,23 @@ refer JSON Folder
 Making Server-Side API Request with Axios:-
 ******************************************
 
+->Making request from your server using Node and Axios.
+
+
+ your server | Someone else's server
+------------------------------------
+   req/res            req/res
+    <----->Public API<------->
+
+Axios:-
+-----
+->Axios is a third-party library that can be installed via a package manager.
+->Axios supports older browsers.
+->Axios automatically transforms errors
+->Axios automatically parses JSON
+->Axios has a built-in mechanism for canceling requests
+->Axios has a timeout option
+->Axios uses the data property for sending data in a POST request.
+->Axios automatically transforms the server's response data.
+
 
