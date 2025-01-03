@@ -86,8 +86,8 @@ const data = {
     type: "charity",
     spend time: [
         {
-            duration": "hours",
-            duration": "minutes"
+            duration: "hours",
+            duration: "minutes"
         }
     ]
     key: "1878071"
@@ -113,5 +113,12 @@ JSON:
 
 JS Object --> JSON
 const jsonData = JSON.stringify(data);
+JSON --> JS Object
+const data = JSON.parse(jsonData);
+
+refer JSON Folder
+
+Making Server-Side API Request with Axios:-
+******************************************
 
 
