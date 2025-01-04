@@ -140,4 +140,18 @@ Axios:-
 ->Axios uses the data property for sending data in a POST request.
 ->Axios automatically transforms the server's response data.
 
+Random data:-
+https://bored-api.appbrewery.com/random
 
+{
+    "activity": "Start a collection",
+    "availability": 0.5,
+    "type": "recreational",
+    "participants": 1,
+    "price": 0,
+    "accessibility": "Few to no challenges",
+    "duration": "hours",
+    "kidFriendly": true,
+    "link": "",
+    "key": "1718657"
+}
