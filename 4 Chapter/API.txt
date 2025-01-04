@@ -168,20 +168,24 @@ API Authentication:-
 3. Token Based authonication
 
 No authonication
------------------
+----------------
 
-->based on ip address how many api request they can make it, we set limites.
-
+->Based on ip address how many api request they can make it, we set limites.
 ->Public API No Authontication
 
 Basic authontication
----------------------
+--------------------
 
-->is required for some endpoints. use your usename and password for users
-
+->Is required for some endpoints. use your usename and password for users
 ->Base64 Encodeing(word->Octes->bits->word) we can pass header
 
-API key authonication
+API key Authorization
 ---------------------
+Authorization    |    Authontication
+
+*
 
 
+
+->
+->
