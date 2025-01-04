@@ -131,6 +131,8 @@ Making Server-Side API Request with Axios:-
 
 Axios:-
 -----
+Axios is handling server side request.
+
 ->Axios is a third-party library that can be installed via a package manager.
 ->Axios supports older browsers.
 ->Axios automatically transforms errors
@@ -155,3 +157,31 @@ https://bored-api.appbrewery.com/random
     "link": "",
     "key": "1718657"
 }
+
+API Authentication:-
+*******************
+->Authonticating or Authorization yourself with the API provider.
+
+0. No authonication
+1. Basic authontication
+2. API key authonication
+3. Token Based authonication
+
+No authonication
+-----------------
+
+->based on ip address how many api request they can make it, we set limites.
+
+->Public API No Authontication
+
+Basic authontication
+---------------------
+
+->is required for some endpoints. use your usename and password for users
+
+->Base64 Encodeing(word->Octes->bits->word) we can pass header
+
+API key authonication
+---------------------
+
+
