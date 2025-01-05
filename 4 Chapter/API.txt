@@ -162,12 +162,12 @@ API Authentication:-
 *******************
 ->Authonticating or Authorization yourself with the API provider.
 
-0. No authonication
+0. No authontication
 1. Basic authontication
-2. API key authonication
-3. Token Based authonication
+2. API key authontication
+3. Token Based authontication
 
-No authonication
+No authontication
 ----------------
 
 ->Based on ip address how many api request they can make it, we set limites.
@@ -179,13 +179,47 @@ Basic authontication
 ->Is required for some endpoints. use your usename and password for users
 ->Base64 Encodeing(word->Octes->bits->word) we can pass header
 
-API key Authorization
+API key Authorization:-
 ---------------------
-Authorization    |    Authontication
+Authorization               |    Authontication
 
-*
+*client that allow               *username and password
+to use your service
+using API Key to Authonticating
 
 
+->An API Key is requred to Authorize certain endpoints. Use the API key obtained from the /generate-api-key endpoint.
+->Generates a new API key. https://secrets-api.appbrewery.com/generate-api-key
+
+{
+    "apiKey": "b9c730e2-6c72-40f5-81a9-2e73dfb8d673"
+}
+
+then we need to authonticate
+
+GET/filter
+->Returns a random secret with a particular embarrassment score or higher. API key authentication is required.
+
+https://secrets-api.appbrewery.com/filter?score=5&apiKey=b886c845-9989-43aa-8c60-ea4a669bb587
+
+Token Based authontication:
+--------------------------
+
+->when we give username and password it will provide token in oauth 
+->then we provide that token for access Application it allow to api access.
+
+->Bearer Token Authentication is required for some endpoints. 
+Use your username and password to get a token obtained from the /get-auth-token endpoint.
+
+refer postman collection in API Authentication Folder
+
+example code also
+
+
+Rest APIs:-
+************
 
 ->
-->
+
+
+

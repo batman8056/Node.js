@@ -1,0 +1,316 @@
+{
+	"info": {
+		"_postman_id": "497cb3fe-7f0d-4aeb-940a-08c22669d0d5",
+		"name": "Bored API Documentation",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "40680985"
+	},
+	"item": [
+		{
+			"name": "get res user endpoint",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://bored-api.appbrewery.com/random",
+					"protocol": "https",
+					"host": [
+						"bored-api",
+						"appbrewery",
+						"com"
+					],
+					"path": [
+						"random"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "filter to get perticular details",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://bored-api.appbrewery.com/filter?type=charity&participants= 1",
+					"protocol": "https",
+					"host": [
+						"bored-api",
+						"appbrewery",
+						"com"
+					],
+					"path": [
+						"filter"
+					],
+					"query": [
+						{
+							"key": "type",
+							"value": "charity"
+						},
+						{
+							"key": "participants",
+							"value": " 1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get user details use key",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://bored-api.appbrewery.com/activity/3943506",
+					"protocol": "https",
+					"host": [
+						"bored-api",
+						"appbrewery",
+						"com"
+					],
+					"path": [
+						"activity",
+						"3943506"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "post username and password",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "username",
+							"value": "manish11",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "Manish!1",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://secrets-api.appbrewery.com/register",
+					"protocol": "https",
+					"host": [
+						"secrets-api",
+						"appbrewery",
+						"com"
+					],
+					"path": [
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get authorization details",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "Manish!1",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "manish11",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://secrets-api.appbrewery.com/all?page=1",
+					"protocol": "https",
+					"host": [
+						"secrets-api",
+						"appbrewery",
+						"com"
+					],
+					"path": [
+						"all"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get api key",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://secrets-api.appbrewery.com/generate-api-key",
+					"protocol": "https",
+					"host": [
+						"secrets-api",
+						"appbrewery",
+						"com"
+					],
+					"path": [
+						"generate-api-key"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get api key response",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "Manish!1",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "manish11",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://secrets-api.appbrewery.com/filter?score=5&apiKey=b9c730e2-6c72-40f5-81a9-2e73dfb8d673",
+					"protocol": "https",
+					"host": [
+						"secrets-api",
+						"appbrewery",
+						"com"
+					],
+					"path": [
+						"filter"
+					],
+					"query": [
+						{
+							"key": "score",
+							"value": "5"
+						},
+						{
+							"key": "apiKey",
+							"value": "b9c730e2-6c72-40f5-81a9-2e73dfb8d673"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get token",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "Manish!1",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "manish11",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "username",
+							"value": "manish11",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "Manish!1",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://secrets-api.appbrewery.com/get-auth-token",
+					"protocol": "https",
+					"host": [
+						"secrets-api",
+						"appbrewery",
+						"com"
+					],
+					"path": [
+						"get-auth-token"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "use token to get details",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "78c30141-f4ff-4cda-ba1c-03cbe9a43cdf",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": []
+				},
+				"url": {
+					"raw": "https://secrets-api.appbrewery.com/secrets/2",
+					"protocol": "https",
+					"host": [
+						"secrets-api",
+						"appbrewery",
+						"com"
+					],
+					"path": [
+						"secrets",
+						"2"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
