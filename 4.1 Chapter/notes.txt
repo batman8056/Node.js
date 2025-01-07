@@ -1,0 +1,18 @@
+Build your own API:-
+*******************
+Data gathering -> data preprocessing -> Services -> Algorithm -> Your Product
+
+Monetised APIs:-
+Data Collection      |    Algorithm/Service            |   Simplified Interface
+----------------------------------------------------------------------------------------
+collecting the          some operation                    user can be given details in parameter
+data from database      to be perform based on input      to performing logic
+
+Private or Internal APIs:-
+--------------------------
+
+->internal APIs allow different parts of an enterprise's system to communicate and share data securely.
+
+->User authentication APIs, to handle user logins and verify user identities within the company's ecosystem.
+
+
