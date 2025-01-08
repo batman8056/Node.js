@@ -35,4 +35,8 @@ GET Method
 Createing and Updating jokes
 POST, PUT, PATCH Methods
 
+use postman collection to test the functionality 
+---------------------------------
+Then BLOG API Project for refer |->run the two server for this project server.js api req and index.js api res
+---------------------------------
 
