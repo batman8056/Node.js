@@ -1,10 +1,10 @@
 {
 	"info": {
-		"_postman_id": "87799c51-6cf8-4b46-a1b0-3af1c016ba2b",
+		"_postman_id": "da6002fd-b93d-4c0d-8670-660fcc5d8ddf",
 		"name": "JokeAPI",
 		"description": "A public API to deliver joy to the world!",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_exporter_id": "6048123"
+		"_exporter_id": "40680985"
 	},
 	"item": [
 		{
@@ -13,15 +13,14 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:3000/random/",
+					"raw": "http://localhost:3000/random",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
 					"port": "3000",
 					"path": [
-						"random",
-						""
+						"random"
 					]
 				},
 				"description": "Get a random joke from the Joke API"
@@ -88,6 +87,18 @@
 			"request": {
 				"method": "GET",
 				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/jokes/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"jokes",
+						"1"
+					]
+				},
 				"description": "Responds with a single joke with the requested joke id.\n\nProvide the joke id as a path parameter."
 			},
 			"response": [
@@ -158,6 +169,23 @@
 			"request": {
 				"method": "GET",
 				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/filter?type=Puns",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"filter"
+					],
+					"query": [
+						{
+							"key": "type",
+							"value": "Puns"
+						}
+					]
+				},
 				"description": "Filters all the jokes by their joke type.\n\nProvide a query parameter for `type` and if the type exists, then you should get back all the jokes that match that type."
 			},
 			"response": [
@@ -227,8 +255,28 @@
 			"request": {
 				"method": "POST",
 				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "text",
+							"value": "dragan is to. small",
+							"type": "text"
+						},
+						{
+							"key": "type",
+							"value": "dragan",
+							"type": "text"
+						}
+					]
+				},
 				"url": {
-					"raw": "/jokes",
+					"raw": "http://localhost:3000/jokes",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
 					"path": [
 						"jokes"
 					]
@@ -311,17 +359,31 @@
 			"request": {
 				"method": "PUT",
 				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "text",
+							"value": "why did the scarecrow win a prize? Because he was outstanding in his fiels.",
+							"type": "text"
+						},
+						{
+							"key": "type",
+							"value": "math",
+							"type": "text"
+						}
+					]
+				},
 				"url": {
-					"raw": "/jokes/:id",
+					"raw": "http://localhost:3000/jokes/100",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
 					"path": [
 						"jokes",
-						":id"
-					],
-					"variable": [
-						{
-							"key": "id",
-							"value": null
-						}
+						"100"
 					]
 				},
 				"description": "Completely replace a joke based on the path parameter id specified.\n\nProvide the replacement values for the `text` and `type`."
@@ -409,17 +471,31 @@
 			"request": {
 				"method": "PATCH",
 				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "text",
+							"value": "why did the scarecrow win a prize? Because he was outstanding in his fiels.",
+							"type": "text"
+						},
+						{
+							"key": "type",
+							"value": "something joke",
+							"type": "text"
+						}
+					]
+				},
 				"url": {
-					"raw": "/jokes/:id",
+					"raw": "http://localhost:3000/jokes/99",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
 					"path": [
 						"jokes",
-						":id"
-					],
-					"variable": [
-						{
-							"key": "id",
-							"value": null
-						}
+						"99"
 					]
 				},
 				"description": "Edit a joke for the id that is specified in the path parameter.\n\nProvide optional values for either the `text` or the `type`."
@@ -503,16 +579,15 @@
 				"method": "DELETE",
 				"header": [],
 				"url": {
-					"raw": "/jokes/:id",
+					"raw": "http://localhost:3000/jokes/5",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
 					"path": [
 						"jokes",
-						":id"
-					],
-					"variable": [
-						{
-							"key": "id",
-							"value": null
-						}
+						"5"
 					]
 				},
 				"description": "Delete a joke rfom the bank of jokes based on the path parameter provided for the joke `id`.\n\nWill return an error if no jokes match the provided `id`."
@@ -643,12 +718,36 @@
 		{
 			"name": "All Jokes",
 			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "key",
+							"value": "key",
+							"type": "string"
+						},
+						{
+							"key": "value",
+							"value": "4VGP2DN-6EWM4SJ-N6FGRHV-Z3PR3TT",
+							"type": "string"
+						},
+						{
+							"key": "in",
+							"value": "query",
+							"type": "string"
+						}
+					]
+				},
 				"method": "DELETE",
 				"header": [],
 				"url": {
-					"raw": "/jokes/all",
+					"raw": "http://localhost:3000/all",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
 					"path": [
-						"jokes",
 						"all"
 					]
 				},
