@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Batman Tutorial Point Login</title>
+    <!-- <link rel="stylesheet" href="/css/login.css"> -->
+    <link rel="icon" href="/icon/avatar.png">
+    <style>
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #e9f5ff;
+    padding: 20px;
+}
+
+/* Box Styling */
+.box {
+    width: 100%;
+    max-width: 360px;
+    padding: 40px;
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.box img.avatar {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+.box h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333;
+}
+
+/* Input Box Styling */
+.inputbox {
+    position: relative;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.inputbox input {
+    width: 100%;
+    padding: 12px 10px;
+    border: none;
+    border-bottom: 2px solid #ccc;
+    outline: none;
+    background: transparent;
+    color: #333;
+    font-size: 16px;
+    transition: 0.3s ease;
+}
+
+.inputbox input:focus,
+.inputbox input:valid {
+    border-bottom: 2px solid #007bff;
+}
+
+.inputbox label {
+    position: absolute;
+    top: 12px;
+    left: 10px;
+    color: #777;
+    font-size: 16px;
+    pointer-events: none;
+    transition: 0.3s ease;
+}
+
+.inputbox input:focus ~ label,
+.inputbox input:valid ~ label {
+    top: -10px;
+    font-size: 12px;
+    color: #007bff;
+}
+
+/* Button Styling */
+.box input[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    background-color: #007bff;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.box input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+/* Links Styling */
+#container .forgot-link,
+.signup-link {
+    text-decoration: none;
+    color: #007bff;
+    font-size: 14px;
+    transition: color 0.3s ease;
+}
+
+#container .forgot-link:hover,
+.signup-link:hover {
+    color: #0056b3;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .box {
+        padding: 30px;
+    }
+
+    .box h2 {
+        font-size: 20px;
+    }
+
+    .inputbox input {
+        font-size: 14px;
+    }
+
+    .box input[type="submit"] {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .box {
+        padding: 20px;
+    }
+
+    .box h2 {
+        font-size: 18px;
+    }
+
+    .inputbox input {
+        font-size: 12px;
+        padding: 10px 8px;
+    }
+
+    .box input[type="submit"] {
+        font-size: 12px;
+        padding: 10px;
+    }
+}
+    </style>
+</head>
+<body>
+
+    div class="box">
+    <img src="/icon/avatar.png" class="avatar" alt="Avatar">
+    <h2>Sign In</h2>
+    <form action="/login" method="POST">
+        <!-- Username Input -->
+        <div class="inputbox">
+            <input type="text" name="username" required>
+            <label>Username</label>
+        </div>
+
+        <!-- Password Input -->
+        <div class="inputbox">
+            <input type="password" name="password" required>
+            <label>Password</label>
+        </div>
+
+        <!-- Submit Button -->
+        <input type="submit" value="Sign In">
+
+        <!-- Forgot Password Link -->
+        <div id="container">
+            <center>
+                <a href="#" class="forgot-link">Forgot password?</a>
+            </center>
+        </div>
+
+        <!-- Signup Link -->
+        <center>
+            <h3>Don't have an account? 
+                <a href="/signup" class="signup-link">Sign up</a>
+            </h3>
+        </center>
+    </form>
+</div>
+
+</body>
+</html>
+
+
+

@@ -15,4 +15,24 @@ Private or Internal APIs:-
 
 ->User authentication APIs, to handle user logins and verify user identities within the company's ecosystem.
 
+What make a API RESTfull ?
+
+->HTTP Methods to intract APIs 
+->JSON or XML for standerd output 
+->Client-Server completle seperate 
+->Stateless server side store the data for to process each time done, then go for next process.
+->Resource-based URL(universal resource located) or URI(universal resource identifier)
+
+GET Method
+----------
+
+https://documenter.getpostman.com/view/6048123/2s9XxsTv8Y
+
+
+refer DIY API Folder
+geting jokes
+GET Method
+Createing and Updating jokes
+POST, PUT, PATCH Methods
+
 
