@@ -29,23 +29,87 @@ app.get('/filter', (req, res) =>{
 
 //4. POST a new joke
 app.post('/jokes', (req, res) =>{
+  //new object 
   const newJokes = {
+    //id we given increment automatically
     id : jokes.length + 1,
+    //req we given in body it will get here using dot opertator
     jokeText: req.body.text,
     jokeType: req.body.type
   };
-  const result =  jokes.push(newJokes);
+  //push new object into jokes
+  jokes.push(newJokes);
+  //print the last array of index
   console.log(jokes.slice(-1));
-  res.json(result);
+  //response the object
+  res.json(newJokes);
   });
 
-//5. PUT a joke
+//5. PUT(update) a joke
+app.put('/jokes/:id', (req, res) =>{
+  const id = parseInt(req.params.id);
+    const replacementJokes = {
+    id : id,
+    jokeText: req.body.text,
+    jokeType: req.body.type
+  };
+  const searchIndex = jokes.findIndex((joke) => joke.id === id);
+  jokes[searchIndex] = replacementJokes;
+  // console.log(jokes);
+  res.json(replacementJokes);
+});
 
-//6. PATCH a joke
+//6. PATCH(update requird field) a joke
+app.patch("/jokes/:id", (req, res) => {
+  //geting param detail here make it as a int
+  const id = parseInt(req.params.id);
+  //existing joke 
+  const existingJoke = jokes.find((joke) => joke.id === id);
+  const replacementJoke = {
+    id: id,
+    //we pass existing joke or new joke either any one present it will pass
+    jokeText: req.body.text || existingJoke.jokeText,
+    jokeType: req.body.type || existingJoke.jokeType,
+  };
+  const searchIndex = jokes.findIndex((joke) => joke.id === id);
+  jokes[searchIndex] = replacementJoke;
+  // console.log(jokes[searchIndex]);
+  res.json(replacementJoke);
+});
 
 //7. DELETE Specific joke
+app.delete("/jokes/:id", (req, res) => {
+  //geting param detail here make it as a int our call back happen here
+  const id = parseInt(req.params.id);
+  const result =  jokes.findIndex((joke) => joke.id === id);
+  //index is grater than -1 it is exist 
+  if(result > -1){
+    //use splice method remove the one element from the array of joke
+    jokes.splice(result, 1)
+    res.sendStatus(200);
+  }//if any error happen else part will work
+  else{
+    res
+    .status(404)
+    .json({error :`joke with is :${id} not found No were deleted`})
+  }
 
-//8. DELETE All jokes
+})
+
+//8. DELETE All jokes we use API key to delete all the jokes
+app.delete("/all", (req, res) => {
+  const userKey = req.query.key;
+  if(userKey === masterKey){
+    jokes = [];
+    res.sendStatus(200);
+  }//if any error happen else part will work
+  else{
+    res
+    .status(404)
+    .json({error :`You are not authorised to perform this action.`})
+  }
+})
+
 
 app.listen(port, () => {
   console.log(`Successfully started server on port ${port}.`);
