@@ -12,7 +12,7 @@ Type of Databases?
 
 CRUD (Create Read, Update, Destroy)
 
-onine playground-> https://sqliteonline.com/
+onine playground for SQL-> https://sqliteonline.com/
 
 SQL Commends: CREATE Table and INSERT Data:-
 ------------------------------------------
