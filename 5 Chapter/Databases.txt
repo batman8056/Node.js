@@ -1,0 +1,22 @@
+Where did my data go?
+*********************
+it is a storage of my appliaction backend
+
+Type of Databases?
+------------------
+1.SQL DB (structure query language) - stored a data in table rows and columns anaother advantage is relational database
+                                      manipulating and retrieving data in databases.
+                                      Type of appliaction (MySQL, SQL Server, MS Access, Oracle, Sybase, Informix, Postgres)
+2.Non-SQL DB (non-structure query language) - store a data what ever we want another advantage is we can modify data our flexibility.
+                                      Type of appliaction (Apache, MongoDB, Redis, Amazon Dynomo DB, Azure Cosmos DB,)
+
+CRUD (Create Read, Update, Destroy)
+
+onine playground-> https://sqliteonline.com/
+
+SQL Commends: CREATE Table and INSERT Data:-
+------------------------------------------
+
+
+
+
