@@ -1,6 +1,6 @@
 Where did my data go?
 *********************
-it is a storage of my appliaction backend
+Backend storage some where it is storing.
 
 Type of Databases?
 ------------------
@@ -17,6 +17,86 @@ onine playground for SQL-> https://sqliteonline.com/
 SQL Commends: CREATE Table and INSERT Data:-
 ------------------------------------------
 
+CREATE Table:-(create)
+--------------
+CREATE TABLE Employees (
+    EmployeeID INT PRIMARY KEY,
+    FirstName VARCHAR(50),
+    LastName VARCHAR(50),
+    DateOfBirth DATE,
+    Position VARCHAR(50)
+);
+
+CREATE TABLE product (
+    id int NOT NULL ,
+    name string,
+    price MONEY,
+    PRIMARY KEY (id)
+);
+
+INSERT Data into table:-(update)
+------------------------
+INSERT INTO Employees (CustomerName, ContactName, Address, City, PostalCode, Country)
+VALUES ('Cardinal', 'Tom B. Erichsen', 'Skagen 21', 'Stavanger', '4006', 'Norway');
+
+INSERT INTO product (id, name, price) VALUES ('1', 'Manish', '5.2');
+
+READ the data from table:-(Read)
+--------------------------
+SELECT * FROM Employees 
+
+SELECT * FROM product 
+SELECT name, price FROM product
+SELECT * FROM product WHERE name='Manish';
+
+Update single value and add column the table from database:-(update)
+------------------------------------------------------------
+
+UPDATE product  SET price = 3 WHERE id= 3;
+
+ALTER TABLE product ADD quality string;
+
+UPDATE product  SET quality = 'good' WHERE id= 1;
+
+ALTER TABLE product RENAME COLUMN name TO product;
+
+Destroy row of the table and table from database:-(delete)
+-------------------------------------------------------------
+
+DELETE FROM Employees WHERE FirstName='Alfreds Futterkiste';
+
+DELETE FROM product WHERE id=2;
+
+DELETE FROM product;
+
+Understanding SQL Relationships, foregn key and inner joins:-
+--------------------------------------------------------------
+
+Relationships:-
+--------------
+
+CREATE TABLE orders (
+    id INT NOT NULL,
+    order_number INT,
+    customer_id INT,
+    product_id INT,
+    PRIMARY KEY (id),
+    FOREIGN KEY (customer_id) REFERENCES customer(customer_id),
+    FOREIGN KEY (product_id) REFERENCES product(product_id)
+);
+
+INSERT INTO orders (id, order_number, customer_id, product_id) VALUES (1,121,2,1);
+INSERT INTO orders (id, order_number, customer_id, product_id) VALUES (2,122,1,2);
+INSERT INTO orders (id, order_number, customer_id, product_id) VALUES (3,123,3,3);
+
+inner join:-
+------------
+
+SELECT ProductID, ProductName, CategoryName
+FROM Products
+INNER JOIN Categories ON Products.CategoryID = Categories.CategoryID;
 
 
-
+--------------------------------
+Refer a basic SQL query folder |
+--------------------------------
