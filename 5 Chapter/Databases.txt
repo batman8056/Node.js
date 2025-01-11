@@ -92,10 +92,13 @@ INSERT INTO orders (id, order_number, customer_id, product_id) VALUES (3,123,3,3
 inner join:-
 ------------
 
-SELECT ProductID, ProductName, CategoryName
-FROM Products
-INNER JOIN Categories ON Products.CategoryID = Categories.CategoryID;
+SELECT orders.order_number, customer.FirstName, customer.LastName
+FROM orders
+INNER JOIN customer ON orders.customer_id = customer.customer_id;
 
+SELECT orders.order_number, product.name, product.price
+FROM orders
+INNER JOIN product ON orders.product_id = product.product_id;
 
 --------------------------------
 Refer a basic SQL query folder |
