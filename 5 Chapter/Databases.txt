@@ -103,3 +103,11 @@ INNER JOIN product ON orders.product_id = product.product_id;
 --------------------------------
 Refer a basic SQL query folder |
 --------------------------------
+
+Introduction Postgres:-
+************************
+->an open-source database system that's used to store and organize data. 
+It's known for its reliability, flexibility, and support for a wide range of data types.
+
+->uses Structured Query Language (SQL) for queries and transactions. 
+It supports both relational (SQL) and non-relational (JSON) data types. 
