@@ -104,10 +104,32 @@ INNER JOIN product ON orders.product_id = product.product_id;
 Refer a basic SQL query folder |
 --------------------------------
 
-Introduction Postgres:-
+Introduction PostgreSQL:-
 ************************
-->an open-source database system that's used to store and organize data. 
+->an open-source relational database system that's used to store and organize data. 
 It's known for its reliability, flexibility, and support for a wide range of data types.
 
 ->uses Structured Query Language (SQL) for queries and transactions. 
 It supports both relational (SQL) and non-relational (JSON) data types. 
+
+->Non-blocking PostgreSQL client for Node.js. Pure JavaScript and optional native libpq bindings.
+
+Postgres Table type & keywords:-
+-------------------------------
+
+keywords, Primary Key and datat ypes:-
+
+https://www.postgresql.org/docs/current/datatype.html
+
+Using pgAdmin:-
+---------------
+create a database create table inside pgadmin:-
+READ Data in postgresql Database
+
+username postgres
+password postgres
+--------------------------------
+refer world capital quiz folder |
+--------------------------------
+
+
