@@ -1,22 +1,22 @@
 import express from "express";
 import bodyParser from "body-parser";
-import pg from "pg";
+import pg from 'pg';
+const app = express();
+const port = 3000;
+
 
 const db = new pg.Client({
   user: "postgres",
   host: "localhost",
   database: "world",
-  password: "123456",
+  password: "postgres",
   port: 5432,
 });
-
-const app = express();
-const port = 3000;
 
 db.connect();
 
 let quiz = [];
-db.query("SELECT * FROM capitals", (err, res) => {
+db.query("SELECT * FROM flags", (err, res) => {
   if (err) {
     console.error("Error executing query", err.stack);
   } else {
@@ -24,6 +24,7 @@ db.query("SELECT * FROM capitals", (err, res) => {
   }
   db.end();
 });
+
 
 let totalCorrect = 0;
 
@@ -34,9 +35,9 @@ app.use(express.static("public"));
 let currentQuestion = {};
 
 // GET home page
-app.get("/", async (req, res) => {
+app.get("/", (req, res) => {
   totalCorrect = 0;
-  await nextQuestion();
+  nextQuestion();
   console.log(currentQuestion);
   res.render("index.ejs", { question: currentQuestion });
 });
@@ -45,7 +46,7 @@ app.get("/", async (req, res) => {
 app.post("/submit", (req, res) => {
   let answer = req.body.answer.trim();
   let isCorrect = false;
-  if (currentQuestion.capital.toLowerCase() === answer.toLowerCase()) {
+  if (currentQuestion.name.toLowerCase() === answer.toLowerCase())  {
     totalCorrect++;
     console.log(totalCorrect);
     isCorrect = true;
@@ -59,7 +60,7 @@ app.post("/submit", (req, res) => {
   });
 });
 
-async function nextQuestion() {
+function nextQuestion() {
   const randomCountry = quiz[Math.floor(Math.random() * quiz.length)];
   currentQuestion = randomCountry;
 }

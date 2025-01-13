@@ -132,4 +132,14 @@ password postgres
 refer world capital quiz folder |
 --------------------------------
 
+--------------------------
+refer postgre read folder |
+--------------------------
+
+Querying Data:-
+**************
+
+How to use SELECT,WHERE and LIKE in PostgreSQL:-
+
+
 
