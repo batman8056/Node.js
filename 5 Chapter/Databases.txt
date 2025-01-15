@@ -139,7 +139,50 @@ refer postgre read folder |
 Querying Data:-
 **************
 
-How to use SELECT,WHERE and LIKE in PostgreSQL:-
+How to use SELECT, WHERE and LIKE in PostgreSQL:-
 
+
+SELECT multiple column:-
+SELECT country, rice_production FROM world_food
+
+WHERE Equal:-
+SELECT rice_production FROM world_food WHERE rice_production=13.98;
+
+WHERE greater then Equal value:-
+SELECT rice_production FROM world_food WHERE rice_production>=9;
+SELECT wheat_production FROM world_food WHERE wheat_production>=20;
+
+WHERE LIKE simary united getting:-
+SELECT country FROM world_food WHERE country LIKE 'U'||'%';//start in u
+SELECT country FROM world_food WHERE country LIKE '%'||'a';//ending in a
+
+NOT NULL -missing or empty values are not allowed, Attempt to add NULL Will result in an error.
+
+UNIQUE - Value cannot be repeated in the table. No other value stored can be the same (avoid duplicates).
+
+how to use insert in postgreSQL and in Node:-
+
+INSERT INTO visit_country (id, country_code) VALUES (1,IN);
+
+CREATE TABLE countries(
+	id serial PRIMARY KEY NOT NULL UNIQUE,
+	country_code char(2),
+	country_name VARCHAR(100)
+);
+
+Syntax:-          
+query(SQL commend, [values]);
+
+db.query(
+    "SELECT country_code FROM countries WHERE country_name = $1",//placeholder allow our expresion in sql
+    [input]
+  );
+db.query("INSERT INTO visit_country (country_code) VALUES ($1)", [
+      countryCode,
+    ]);
+    
+------------------------------
+refer Travel Tracker Project |
+------------------------------
 
 
