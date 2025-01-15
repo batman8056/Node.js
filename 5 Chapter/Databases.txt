@@ -185,4 +185,11 @@ db.query("INSERT INTO visit_country (country_code) VALUES ($1)", [
 refer Travel Tracker Project |
 ------------------------------
 
+One to One Relationships:-
+--------------------------
 
+how to use forgin keys and inner joins in one to one Relationships.
+
+->
+
+one to many Relationships:-
