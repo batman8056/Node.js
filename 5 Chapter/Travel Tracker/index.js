@@ -40,7 +40,7 @@ app.post('/add', async (req, res)=>{
   console.log(inputName);//input country code
   try{
     const result =await db.query(
-      "SELECT country_code FROM countries WHERE LOWER(country_name) LIKE $1;",//start or end match it will take the country name
+      "SELECT country_code FROM countries WHERE LOWER(country_name) LIKE '%' || $1 || '%';",//start or end match it will take the country name
       [inputName.toLowerCase()]//we make input name lower case and also query also we define lower case
     );
   

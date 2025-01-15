@@ -165,8 +165,8 @@ how to use insert in postgreSQL and in Node:-
 INSERT INTO visit_country (id, country_code) VALUES (1,IN);
 
 CREATE TABLE countries(
-	id serial PRIMARY KEY NOT NULL UNIQUE,
-	country_code char(2),
+	id serial PRIMARY KEY NOT NULL,
+	country_code CHAR(2),
 	country_name VARCHAR(100)
 );
 
