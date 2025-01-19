@@ -1,11 +1,11 @@
 Authentication and Security Handling Credentials and Desiging a Security login:-
 *******************************************************************************
 
-WEB Authotication :-
+WEB Authontication :-
 -------------------
-->a security process that verifies a user's identity to access a website
+->A security process that verifies a user's identity to access a website
 
-How it works 
+How it works:-
 When a user creates an account, they receive a unique ID and key.
 The ID and key are stored in a secure web server.
 When a user logs in, their ID and key are compared to the stored credentials.
@@ -14,9 +14,27 @@ HOME -> REGISTER -> SECRETS -> LOGIN -> SECRETS
 
 Types of web authentication:-
 
-1.Basic authentication
-2.Token-based authentication
-3.OAuth - third party Authotication
-4.WebAuthn
+1.Basic authentication ->email and password
+2.Token-based authentication ->
+3.OAuth -> third party Authotication
+4.WebAuthn ->
+ 
+
+Basic authentication (email and password);-
+------------------------------------------
+->login and register page creation using pg
+->Encryption and Hashing password using bcrypt
+
+Encryption->The process of converting information or data into a code, 
+            especially to prevent unauthorized access.
+
+
+----------------------------------
+Refer the Authontication folder |
+----------------------------------
+
+
+
+
 
 
