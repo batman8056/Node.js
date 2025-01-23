@@ -47,18 +47,17 @@ app.get('/signup', (req, res) => {
 });
 
 
-
-// app.get('/index', (req, res) => {
-//     res.render('index.ejs');
-// });
-app.get("/index", (req, res) => {
-    console.log(req.user);
-    if (req.isAuthenticated()){
-      res.render("index.ejs");
-    }else{
-      res.redirect("/login");
-    }
-  })
+app.get('/index', (req, res) => {
+    res.render('index.ejs');
+});
+// app.get("/index", (req, res) => {
+//     console.log(req.user);
+//     if (req.isAuthenticated()){
+//       res.render("index.ejs");
+//     }else{
+//       res.redirect("/login");
+//     }
+//   })
 
 
 // Start the server
