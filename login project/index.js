@@ -47,6 +47,17 @@ app.get('/signup', (req, res) => {
     res.render('signup.ejs');
 });
 
+app.get('/index', (req, res) => {
+    res.render('index.ejs');
+});
+app.get("/index", (req, res) => {
+    console.log(req.user);
+    if (req.isAuthenticated()){
+      res.render("index.ejs");
+    }else{
+      res.redirect("/login");
+    }
+  })
 // Route to handle login form submission (POST)
 // app.post('/login', (req, res) => {
 //     const { username, password } = req.body;
