@@ -32,15 +32,21 @@ app.use(express.static("public"));
 // Route for login page (GET)
 app.get('/', (req, res) => {
     res.render('login.ejs');
+    res.render('forgot-password.ejs');
 });
 
 app.get('/forgot-password', (req, res) => {
     res.render('forgot-password.ejs');
 });
+app.get('/login', (req, res) => {
+    res.render('login.ejs');
+});
 
 app.get('/signup', (req, res) => {
     res.render('signup.ejs');
 });
+
+
 
 // app.get('/index', (req, res) => {
 //     res.render('index.ejs');
