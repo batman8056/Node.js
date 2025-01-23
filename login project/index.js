@@ -1,15 +1,41 @@
-const express = require('express');
+import express from "express";
+import bodyParser from "body-parser";
+import pg from "pg";
+import bcrypt from "bcrypt";
+import session from "express-session";
+import passport from "passport";
+import { Strategy } from "passport-local";
+import env from 'dotenv';
+import GoogleStrategy from 'passport-google-oauth2';
+import path from 'path';
+
 const app = express();
-const path = require('path');
-const bodyParser = require('body-parser');
+const port = 3000;
+const saltRounds = 10;
+env.config();
+
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(express.static("public"));
 
 // Set EJS as the template engine
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
 
 // Middleware to serve static files
-// app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, 'public')));
 app.use(bodyParser.urlencoded({ extended: true }));
+
+//created a session 
+// app.use(session({
+//   secret:process.env.SESSION_SECRET,
+//   resave: false,
+//   saveUninitialized: true,
+//   cookie: {
+//     maxAge: 1000 * 60 *60 * 24,
+//   }
+// }))
+
+
 
 // Route for login page (GET)
 app.get('/login', (req, res) => {
@@ -39,7 +65,7 @@ app.get('/logout', (req, res) => {
 });
 
 // Start the server
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || port;
 app.listen(PORT, () => {
     console.log(`Server running at http://localhost:${PORT}`);
 });

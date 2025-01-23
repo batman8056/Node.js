@@ -12,6 +12,10 @@ const port = 3000;
 const saltRounds = 10;
 env.config();
 
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(express.static("public"));
+
+//created a session 
 app.use(
   session({
     secret: "TOPSECRETWORD",
@@ -19,12 +23,11 @@ app.use(
     saveUninitialized: true,
   })
 );
-app.use(bodyParser.urlencoded({ extended: true }));
-app.use(express.static("public"));
-
+//after created of session we need to initialize the session using passport
 app.use(passport.initialize());
 app.use(passport.session());
 
+//db configuration
 const db = new pg.Client({
   user: "postgres",
   host: "localhost",
@@ -107,7 +110,7 @@ app.post("/register", async (req, res) => {
 
 passport.use(
   new Strategy(async function verify(username, password, cb) {
-    try {
+    try { 
       const result = await db.query("SELECT * FROM users WHERE email = $1 ", [
         username,
       ]);

@@ -33,8 +33,44 @@ Encryption->The process of converting information or data into a code,
 Refer the Authontication folder |
 ----------------------------------
 
+Managing Cookies and Sessions:-
+*******************************
+
+->Once user login they don't want to login again just save the login details in Cookies
+
+Environment Variables:-
+----------------------
+-> Keeping your secrets secret since 1979
+
+->Don't put secrets inside your repo
+
+use case - Convenience(without touch code we modify varaiable value), Security(we don't want store same place value)
+
+--------------------------------------
+Refer the Sessions and Cookies folder |
+--------------------------------------
 
 
+oAuth Implementation "sign in with google":-(open standerd token authorisation)
+*******************************************
+use third party cloud service = https://www.passportjs.org/tutorials/google/register/
+
+->How to use OAuth to authentication your users without storing their credentials.
+->we use third party cloud service to authonticate user
+
+1.Granular Access Levels-need to give user requird access like profile and personal data
+2.Read and Read/Write Access-Retrive the information of the users and edit the user infromation 
+3.Revoke Access-deauthonicate of access in the user
+
+Step1-Setup your APP in developer console we need to return App identity or client id
+Step2-Redirect to authonticate(sign up)
+Step3-user login third party website like gmail or facebook
+Step4-then user grand permission
+Step5-user Recived Authorisation code from like gmail or facebook
+Step6-Exchange AuthCode for Access Token
 
 
+--------------------------------------
+Refer the Sessions and Cookies folder |
+--------------------------------------
 
