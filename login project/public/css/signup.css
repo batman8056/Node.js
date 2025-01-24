@@ -82,6 +82,12 @@ body {
 }
 
 /* Gender Options */
+.form-group h3 {
+    margin-left: 4.5%;
+    margin-bottom: 15px;
+    font-size: 12px;
+    color: #007bff;
+}
 .gender-options {
     display: flex;
     justify-content: space-around;
