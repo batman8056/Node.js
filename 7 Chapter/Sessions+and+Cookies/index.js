@@ -60,7 +60,29 @@ app.get("/secrets", (req, res) => {
     res.redirect("/login");
   }
 })
-
+app.get("/auth/google", 
+  passport.authenticate("google",{
+  scope:["profile","email"],
+})
+);
+app.get("/auth/google/secrets", passport.authenticate("google",{
+  successRedirect: "/secrets",
+  failureRedirect: "/login"
+}))
+app.get("/logout", (req, res) => {
+  req.logout(function (err) {
+    if (err) {
+      return next(err);
+    }
+    res.redirect("/");
+  });
+});
+app.post("/login", 
+  passport.authenticate("local",{
+  successRedirect: "/secrets",
+  failureRedirect: "/login"
+})
+);
 app.post("/register", async (req, res) => {
   const email = req.body.username;
   const password = req.body.password;
@@ -96,27 +118,7 @@ app.post("/register", async (req, res) => {
   }
 });
 
-app.get("/auth/google", 
-  passport.authenticate("google",{
-  scope:["profile","email"],
-})
-);
-app.get("/auth/google/secrets", passport.authenticate("google",{
-  successRedirect: "/secrets",
-  failureRedirect: "/login"
-}))
-app.get("/logout", (reg, res)=>{
-  reg.logout((err)=>{
-    if(err) console.log(err);
-    res.redirect("/");
-  })
-})
-app.post("/login", 
-  passport.authenticate("local",{
-  successRedirect: "/secrets",
-  failureRedirect: "/login"
-})
-);
+
 
 //username and password we directly getting req data from login.ejs
 passport.use("local",
@@ -130,11 +132,15 @@ passport.use("local",
       const storedHashedPassword = user.password;
       bcrypt.compare(password, storedHashedPassword, (err, result) => {
         if (err) {
+          //Error with password check
+          console.error("Error comparing passwords:", err);
           return cb(err)
         } else {
           if (result) {
+            //Passed password check
             return cb(null, user);
           } else {
+            //Did not pass password check
             return cb(null, false);
           }
         }
