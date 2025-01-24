@@ -9,7 +9,7 @@ import env from 'dotenv';
 import GoogleStrategy from 'passport-google-oauth2';
 
 const app = express();
-const port = 3000;
+const PORT = 3000;
 const saltRounds = 10;
 env.config();
 
@@ -66,18 +66,8 @@ app.get('/signup', (req, res) => {
 
 app.get('/profile',async (req, res) => {
     res.render('profile.ejs')
-    // try{
-    //     const result = await db.query("SELECT * FROM users_profiles ORDER BY id ASC");
-    //     items = result.rows;
-    //     console.log("users detailas ",items);
-    //     res.render('index.ejs', {
-    //         listTitle: "Today",
-    //         listItems: items,
-    //       });
-    // }catch(err){
-    //     console.log(err);
-    // }
 });
+
 app.get("/index", (req, res) => {
     console.log(req.user);
     if (req.isAuthenticated()){
@@ -86,6 +76,21 @@ app.get("/index", (req, res) => {
       res.redirect("/login");
     }
   })
+  app.get("/logout", (req, res) => {
+    req.logout(function (err) {
+      if (err) {
+        return next(err);
+      }
+      res.redirect("/");
+    });
+  });
+  app.post("/login", 
+    passport.authenticate("local",{
+    successRedirect: "/index",
+    failureRedirect: "/login"
+  })
+  );
+
 
 app.post("/signin-form", async (req, res) => {
     const regUserName = req.body.username
@@ -131,18 +136,7 @@ app.post("/signin-form", async (req, res) => {
       console.log(err);
     }
   });
-  app.get("/logout", (req, res)=>{
-    req.logout((err)=>{
-      if(err) console.log(err);
-      res.redirect("/");
-    })
-  })
-  app.post("/login", 
-    passport.authenticate("local",{
-    successRedirect: "/index",
-    failureRedirect: "/login"
-  })
-  );
+
 
   //username and password we directly getting req data from login.ejs
   passport.use("local",
@@ -184,7 +178,6 @@ app.post("/signin-form", async (req, res) => {
   });
   
 // Start the server
-const PORT = port;
 app.listen(PORT, () => {
     console.log(`Server running at http://localhost:${PORT}`);
 });
