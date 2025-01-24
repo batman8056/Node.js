@@ -58,6 +58,34 @@ app.get('/index', (req, res) => {
 //     }
 //   })
 
+app.post("/signup-form", async (req, res) => {
+    const reguserEmail = req.body.username
+    const regPassword = req.body.password
+    try{
+      const checkResult = await db.query("SELECT * FROM users WHERE email = $1", [
+        reguserName,
+      ]);
+      if (checkResult.rows.length > 0) {
+        res.send("Email already exists. Try logging in.");
+      }else {
+        //hashing the password and saving it in the database
+        bcrypt.hash(regPassword, saltRounds, async (err, hash) => {
+          if (err) {
+            console.error("Error hashing password:", err);
+          } else {
+            console.log("Hashed Password:", hash);
+            await db.query(
+              "INSERT INTO users (email, password) VALUES ($1, $2)",
+              [reguserEmail, hash]
+            );
+            res.render("index.ejs");
+          }
+        });
+      }
+    }catch(err){
+      console.log(err);
+    }
+  });
 
 // Start the server
 const PORT = port;
