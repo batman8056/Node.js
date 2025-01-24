@@ -1,4 +1,3 @@
-
 CREATE TABLE users (
     id INT AUTO_INCREMENT PRIMARY KEY,  -- Unique ID for each user
     username VARCHAR(50) NOT NULL UNIQUE, -- Unique username for login
@@ -9,3 +8,4 @@ CREATE TABLE users (
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP, -- Creation timestamp
     updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP -- Update timestamp
 );
+
