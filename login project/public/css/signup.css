@@ -36,7 +36,12 @@ body {
     font-weight: 600;
     color: #333;
 }
-
+.form-container .error-message{
+    color: red;
+    font-size: 14px;
+    margin-bottom: 20px;
+    margin-left: 22%;
+}
 /* Input Box Styling */
 .inputbox {
     position: relative;
