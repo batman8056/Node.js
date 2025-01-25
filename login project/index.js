@@ -193,9 +193,6 @@ app.post("/signin-form", async (req, res) => {
 app.post("/update-profile", async function (req, res) {
   console.log(req.body);
   console.log(req.user);
-  if (!req.user) {
-    return res.redirect("/login");  // Redirect if not authenticated
-  }
 
   const submittedUsername = req.body.username;
   const submittedDob = req.body.dob;
