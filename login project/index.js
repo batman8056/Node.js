@@ -69,7 +69,7 @@ app.get('/profile',async (req, res) => {
 });
 
 app.get("/index", (req, res) => {
-    console.log(req.user);
+    // console.log(req.user);
     if (req.isAuthenticated()){
       res.render("index.ejs");
     }else{
@@ -90,7 +90,15 @@ app.get("/index", (req, res) => {
     failureRedirect: "/login"
   })
   );
-
+app.get("/auth/google", 
+  passport.authenticate("google",{
+  scope:["profile","email"],
+})
+);
+app.get("/auth/google/secrets", passport.authenticate("google",{
+  successRedirect: "/index",
+  failureRedirect: "/login"
+}))
 
 app.post("/signin-form", async (req, res) => {
     const regUserName = req.body.username
@@ -120,7 +128,7 @@ app.post("/signin-form", async (req, res) => {
             console.error("Error hashing password:", err);
           } else {
             console.log("Hashed Password:", hash);
-            await db.query(
+            const result = await db.query(
               "INSERT INTO users_profiles (username, email, password, dob, gender) VALUES ($1, $2, $3, $4, $5)",
               [regUserName, regEmail, hash, regDob, regGender]
             );
@@ -168,6 +176,32 @@ app.post("/signin-form", async (req, res) => {
   })
   );
 
+  passport.use("google", 
+    new GoogleStrategy({
+    clientID: process.env.GOOGLE_CLIENT_ID,
+    clientSecret: process.env.GOOGLE_CLIENT_SECRET,
+    callbackURL: "http://localhost:3000/auth/google/secrets",
+    userProfileURL: "https://www.googleapis.com/oauth2/v3/userinfo"
+  },
+  async (accessToken, refreshToken, profile, cb) =>{
+    console.log(profile);
+    try{
+      const result = await db.query("SELECT * FROM users_profiles WHERE email = $1",[
+        profile.email,
+      ]);
+      if (result.rows.length === 0){
+        const newUser =await db.query("INSERT INTO users_profiles (username, email, password) VALUES ($1, $2, $3)",[profile.given_name, profile.email,"google"]
+        );
+        cb(null, newUser.rows[0])
+      }else{
+        //Already exist user
+        cb(null, result.rows[0])
+      }
+    }catch(err){
+      cb(err);
+    }
+  })
+  );
 
   passport.serializeUser((user, cb) =>{
     cb(null, user);
