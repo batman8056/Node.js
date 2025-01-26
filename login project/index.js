@@ -92,7 +92,7 @@ app.get("/index",async (req, res) => {
     if (req.isAuthenticated()) {
       try {
         const result = await db.query(
-          `SELECT username, email, dob, gender FROM users_profiles WHERE email = $1`,
+          `SELECT username, email, dob::TEXT AS dob, gender FROM users_profiles WHERE email = $1`,
           [req.user.email]
         );
         console.log(result);
@@ -102,7 +102,7 @@ app.get("/index",async (req, res) => {
           res.render("update-profile.ejs", { 
             username: userDetails.username,
             email: userDetails.email,
-            dob: userDetails.dob = new Date(userDetails.dob).toISOString().split('T')[0],
+            dob: userDetails.dob ,
             gender: userDetails.gender
            });
         } else {
@@ -195,8 +195,9 @@ app.post("/update-profile", async function (req, res) {
   console.log(req.user);
 
   const submittedUsername = req.body.username;
-  const submittedDob = req.body.dob;
+  const submittedDob = new Date(req.body.dob).toISOString().split('T')[0];;
   const submittedGender = req.body.gender;
+  console.log("Updating DOB with:", submittedDob);
 
   try {
     await db.query(
