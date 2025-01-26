@@ -144,6 +144,7 @@ app.get("/auth/google/secrets", passport.authenticate("google",{
   failureRedirect: "/login"
 }))
 
+
 app.post("/signin-form", async (req, res) => {
     const regUserName = req.body.username
     const regPassword = req.body.password
@@ -188,10 +189,9 @@ app.post("/signin-form", async (req, res) => {
       console.log(err);
     }
   });
-  
-//update profile information
+  //update profile information
 app.post("/update-profile", async function (req, res) {
-  console.log(req.body);
+  console.log("Request body:", req.body); // Log the incoming request body
   console.log(req.user);
 
   const submittedUsername = req.body.username;
@@ -206,8 +206,10 @@ app.post("/update-profile", async function (req, res) {
     res.redirect("/update-profile");  // Redirect to the update-profile page after the update
   } catch (err) {
     console.log(err);
+    res.status(500).send("Error updating profile.");
   }
 });
+
 
   //username and password we directly getting req data from login.ejs
   passport.use("local",
