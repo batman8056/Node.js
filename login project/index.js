@@ -140,10 +140,11 @@ app.get("/auth/google",
   scope:["profile","email"],
 })
 );
-app.get("/auth/google/secrets", passport.authenticate("google",{
+app.get("/auth/google/secrets", 
+  passport.authenticate("google",{
   successRedirect: "/index",
   failureRedirect: "/login"
-}))
+}));
 
 
 app.post("/signin-form", async (req, res) => {
@@ -196,7 +197,8 @@ app.post("/update-profile", async function (req, res) {
   console.log(req.user);
 
   const submittedUsername = req.body.username;
-  const submittedDob = new Date(req.body.dob).toISOString().split('T')[0];;
+  // Check if dob is provided, if not, set it to null
+  const submittedDob = req.body.dob ? new Date(req.body.dob).toISOString().split('T')[0]: null;
   const submittedGender = req.body.gender;
   console.log("Updating DOB with:", submittedDob);
 
@@ -257,9 +259,9 @@ app.post("/update-profile", async function (req, res) {
         profile.email,
       ]);
       if (result.rows.length === 0){
-        const newUser =await db.query("INSERT INTO users_profiles (username, email, password) VALUES ($1, $2, $3)",[profile.given_name, profile.email,"google"]
+        const user =await db.query("INSERT INTO users_profiles (username, email, password) VALUES ($1, $2, $3)",[profile.given_name, profile.email,"google"]
         );
-        cb(null, newUser.rows[0])
+        cb(null, user.rows[0]);
       }else{
         //Already exist user
         cb(null, result.rows[0])
