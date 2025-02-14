@@ -1,13 +1,13 @@
 # 🚀 Backend Learning Journey
 
 <h3 align="left">Languages and Tools:</h3>
-<p align="left"> <a href="https://expressjs.com" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/express/express-original-wordmark.svg" alt="express" width="40" height="40"/> </a> <a href="https://git-scm.com/" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/git-scm/git-scm-icon.svg" alt="git" width="40" height="40"/> </a> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" alt="javascript" width="40" height="40"/> </a>  <a href="https://www.linux.org/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/linux/linux-original.svg" alt="linux" width="40" height="40"/> </a> <a href="https://www.mongodb.com/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mongodb/mongodb-original-wordmark.svg" alt="mongodb" width="40" height="40"/> </a> <a href="https://www.mysql.com/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original-wordmark.svg" alt="mysql" width="40" height="40"/> </a> <a href="https://nodejs.org" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original-wordmark.svg" alt="nodejs" width="40" height="40"/> </a> <a href="https://www.postgresql.org" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/postgresql/postgresql-original-wordmark.svg" alt="postgresql" width="40" height="40"/> </a> <a href="https://postman.com" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/getpostman/getpostman-icon.svg" alt="postman" width="40" height="40"/> </a> </p>
+<p align="left"> <a href="https://expressjs.com" target="_blank" rel="noreferrer"> <img src="https://seeklogo.com/images/E/express-js-logo-FA36FF1D3F-seeklogo.com.png" alt="express" width="40" height="40" color="red"/> </a> <a href="https://git-scm.com/" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/git-scm/git-scm-icon.svg" alt="git" width="40" height="40"/> </a> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" alt="javascript" width="40" height="40"/> </a>  <a href="https://www.linux.org/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/linux/linux-original.svg" alt="linux" width="40" height="40"/> </a> <a href="https://www.mongodb.com/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mongodb/mongodb-original-wordmark.svg" alt="mongodb" width="40" height="40"/> </a> <a href="https://www.mysql.com/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original-wordmark.svg" alt="mysql" width="40" height="40"/> </a> <a href="https://nodejs.org" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original-wordmark.svg" alt="nodejs" width="40" height="40"/> </a> <a href="https://www.postgresql.org" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/postgresql/postgresql-original-wordmark.svg" alt="postgresql" width="40" height="40"/> </a> <a href="https://postman.com" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/getpostman/getpostman-icon.svg" alt="postman" width="40" height="40"/> </a> </p>
 
 ## Here's a structured learning path for mastering backend development in order of chapters, covering the core topics and gradually advancing to more complex concepts
 
 
 
-## **📌 Chapter 1: The Backend**
+## **📁 Chapter 1: The Backend**
 
 ### **Servers, Applications, and Databases**
 - **Server**: A computer running 24/7 to handle requests.
@@ -31,7 +31,7 @@
 
 ---
 
-## **📌 Chapter 2: Command Line Arguments & File System**
+## **📁 Chapter 2: Command Line Arguments & File System**
 
 ### **Command Line Arguments in Node.js**
 - Used to receive user input via CLI.
@@ -52,7 +52,7 @@ Example Files:
 
 ---
 
-## **📌 Chapter 3: Express.js & HTTP Requests**
+## **📁 Chapter 3: Express.js & HTTP Requests**
 
 ### **Express.js in Node.js**
 ✅ **Minimal & flexible framework** for web and mobile applications.  
@@ -77,7 +77,7 @@ Example Files:
 
 ---
 
-## **📌 Chapter 3.1: Asynchronous JavaScript & Event Loop**
+## **📁 Chapter 3.1: Asynchronous JavaScript & Event Loop**
 
 ### **Synchronous vs Asynchronous Programming**
 ✅ **Synchronous**: Code execution is blocking and sequential.
@@ -94,7 +94,7 @@ Example Files:
 
 ---
 
-## **📌 Chapter 4: Authentication & Building APIs**
+## **📁 Chapter 4: Authentication & Building APIs**
 
 ### **Building APIs**
 ✅ **Data Gathering → Preprocessing → Services → Algorithms → Product**  
@@ -115,7 +115,7 @@ Example Files:
 
 ---
 
-## **📌 Chapter 4.1: Building Your Own API**
+## **📁 Chapter 4.1: Building Your Own API**
 
 ### **API Development Process**
 ✅ **Data Gathering → Data Preprocessing → Services → Algorithm → API Product**
@@ -127,7 +127,7 @@ Example Files:
 
 ---
 
-## **📌 Chapter 5: Databases & SQL Queries**
+## **📁 Chapter 5: Databases & SQL Queries**
 
 ### **Types of Databases**
 1. **SQL Databases**: Structured data in tables (MySQL, PostgreSQL, MS SQL Server).
@@ -154,7 +154,7 @@ FROM orders
 INNER JOIN customer ON orders.customer_id = customer.customer_id;
 ```
 
-## **📌 Chapter 7: Building Real-World Applications**
+## **📁 Chapter 7: Building Real-World Applications**
 
 ### **Projects Covered**
 ✅ **DIY API Project** (Creating APIs with Express.js)  
@@ -163,7 +163,7 @@ INNER JOIN customer ON orders.customer_id = customer.customer_id;
 ✅ **Permalist Project** (User authentication & API security)
 
 ---
-## **📌 Chapter 8: Authentication and Security Handling Credentials**
+## **📁 Chapter 8: Authentication and Security Handling Credentials**
 
 ### **Web Authentication**
 ✅ A process to verify user identity to access a website.  
@@ -182,19 +182,19 @@ HOME -> REGISTER -> SECRETS -> LOGIN -> SECRETS
 ✅ **Encryption and Hashing** using bcrypt.
 ✅ **Encryption**: Converts data into a secure code to prevent unauthorized access.
 
-📌 **Refer the Authentication Folder**
+📁 **Refer the Authentication Folder**
 
 ---
 
-## **📌 Managing Cookies and Sessions**
+## **📁 Managing Cookies and Sessions**
 ✅ Users stay logged in without re-entering credentials.  
 ✅ **Environment Variables**: Secure way to store credentials without exposing them.
 
-📌 **Refer the Sessions and Cookies Folder**
+📁 **Refer the Sessions and Cookies Folder**
 
 ---
 
-## **📌 OAuth Implementation - Sign in with Google**
+## **📁 OAuth Implementation - Sign in with Google**
 ✅ OAuth allows authentication via third-party services (e.g., Google, Facebook).
 
 ### **OAuth Steps:**
@@ -205,7 +205,7 @@ HOME -> REGISTER -> SECRETS -> LOGIN -> SECRETS
 5. **Authorization Code is generated**.
 6. **Exchange Auth Code for Access Token**.
 
-📌 **Refer the Secrets Project Folder**
+📁 **Refer the Secrets Project Folder**
 
 ---
 
