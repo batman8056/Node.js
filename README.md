@@ -115,6 +115,54 @@ Example Files:
 
 ---
 
+## **📌 Chapter 4.1: Building Your Own API**
+
+### **API Development Process**
+✅ **Data Gathering → Data Preprocessing → Services → Algorithm → API Product**
+✅ **Understanding Monetized APIs**
+✅ **RESTful API Design Best Practices**
+
+Example Files:
+- `API Folder`, `Blog API Project`
+
+---
+
+## **📌 Chapter 5: Databases & SQL Queries**
+
+### **Types of Databases**
+1. **SQL Databases**: Structured data in tables (MySQL, PostgreSQL, MS SQL Server).
+2. **NoSQL Databases**: Flexible data storage (MongoDB, Firebase, Redis).
+
+### **CRUD Operations in SQL**
+✅ **Create**: `CREATE TABLE` and `INSERT INTO`  
+✅ **Read**: `SELECT * FROM table_name`  
+✅ **Update**: `UPDATE table_name SET column=value WHERE condition`  
+✅ **Delete**: `DELETE FROM table_name WHERE condition`
+
+Example Files:
+- `world_food.sql`, `product.sql`, `employees.sql`
+
+### **Relationships & Joins in SQL**
+✅ **One-to-One Relationship**
+✅ **One-to-Many Relationship**
+✅ **Many-to-Many Relationship**
+
+Example:
+```sql
+SELECT orders.order_number, customer.FirstName
+FROM orders
+INNER JOIN customer ON orders.customer_id = customer.customer_id;
+```
+
+## **📌 Chapter 7: Building Real-World Applications**
+
+### **Projects Covered**
+✅ **DIY API Project** (Creating APIs with Express.js)  
+✅ **Blog API Project** (Handling CRUD operations)  
+✅ **Family Travel Tracker** (SQL joins & data relations)  
+✅ **Permalist Project** (User authentication & API security)
+
+---
 ## **📌 Chapter 8: Authentication and Security Handling Credentials**
 
 ### **Web Authentication**
